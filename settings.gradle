@@ -1,2 +1,5 @@
 rootProject.name = 'com.maple'
+include 'eureka-server'
+include 'api-sso'
+include 'api-sso2'
 

@@ -19,7 +19,6 @@ import java.util.List;
  * @date: 2019/1/26 22:08
  */
 @Configuration
-@EnableWebMvc
 @ComponentScan
 public class MvcConfiguration extends WebMvcConfigurerAdapter {
     @Bean

@@ -1,0 +1,35 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8090/eureka/
+server:
+  port: 8093
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    driverClassName: com.mysql.jdbc.Driver
+    url: jdbc:mysql://47.96.174.226/maple?characterEncoding=utf-8
+    username: root
+    password: Dfas528811729!
+  http:
+    encoding:
+      force: true
+      charset: UTF-8
+      enabled: true
+  redis:
+    host: 47.96.174.226
+    port: 6379
+    password:
+    database: 0
+    pool:
+      max-active: 8
+      min-idle: 0  # 连接池中的最小空闲连接
+      max-wait: -1 # 连接超时时间（毫秒）
+      max-idle: 8
+  application:
+    name: getway
+zuul:
+  routes:
+    api:
+      path: /api/**
+      serviceId: eurekaclient

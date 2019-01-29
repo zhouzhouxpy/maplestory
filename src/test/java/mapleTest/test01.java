@@ -3,6 +3,7 @@ package mapleTest;
 import com.maple.MapleStoryApplication;
 import com.maple.common.model.UUID;
 import javafx.application.Application;
+import org.assertj.core.util.Compatibility;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;

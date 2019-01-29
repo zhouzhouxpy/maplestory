@@ -1,5 +1,5 @@
 server:
-  port: 8090
+  port: 8091
   tomcat:
     max-threads: 800
     uri-encoding: UTF-8
@@ -24,10 +24,10 @@ spring:
     pool:
       max-active: 8
       min-idle: 0  # 连接池中的最小空闲连接
-      max-wait: -1 # 连接超时时间（毫秒）
-      max-idle: 8
+      max-wait: -1
+      max-idle: 8 # 连接超时时间（毫秒）
   application:
-    name: eureka
+    name: eurekaclient
 
 # 扫描 mybatis 文件
 mybatis:
@@ -41,12 +41,6 @@ uuid:
 
 #eureka
 eureka:
-  instance:
-      preferIpAddress: true
-      hostname: ${spring.cloud.client.ipAddress}
-      instanceId: ${spring.cloud.client.ipAddress}:${server.port}
   client:
-    registerWithEureka: false
-    fetchRegistry: false
     serviceUrl:
-      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+      defaultZone: http://localhost:8090/eureka/

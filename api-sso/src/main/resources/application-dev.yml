@@ -1,46 +1,49 @@
-server:
-  port: 8091
-  tomcat:
-    max-threads: 800
-    uri-encoding: UTF-8
-#据库配置
-spring:
-  datasource:
-    type: com.alibaba.druid.pool.DruidDataSource
-    driverClassName: com.mysql.jdbc.Driver
-    url: jdbc:mysql://47.96.174.226/maple?characterEncoding=utf-8
-    username: root
-    password: Dfas528811729!
-  http:
-    encoding:
-      force: true
-      charset: UTF-8
-      enabled: true
-  redis:
-    host: 47.96.174.226
-    port: 6379
-    password:
-    database: 0
-    pool:
-      max-active: 8
-      min-idle: 0  # 连接池中的最小空闲连接
-      max-wait: -1
-      max-idle: 8 # 连接超时时间（毫秒）
-  application:
-    name: eurekaclient
-
-# 扫描 mybatis 文件
-mybatis:
-  mapperLocations: classpath:com/maple/*/mapper/*.xml
-  typeAliasesPackage: com.hs.*.model
-
-#ID 生成策略配置
-uuid:
-  workerId: "2"
-  datacenterId: "1"
-
-#eureka
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:8090/eureka/
+#server:
+#  port: 8091
+#  tomcat:
+#    max-threads: 800
+#    uri-encoding: UTF-8
+##据库配置
+#spring:
+#  datasource:
+#    type: com.alibaba.druid.pool.DruidDataSource
+#    driverClassName: com.mysql.jdbc.Driver
+#    url: jdbc:mysql://47.96.174.226/maple?characterEncoding=utf-8
+#    username: root
+#    password: Dfas528811729!
+#  http:
+#    encoding:
+#      force: true
+#      charset: UTF-8
+#      enabled: true
+#  redis:
+#    host: 47.96.174.226
+#    port: 6379
+#    password: dfas6485751
+#    database: 0
+#    pool:
+#      max-active: 8
+#      min-idle: 0  # 连接池中的最小空闲连接
+#      max-wait: -1
+#      max-idle: 8 # 连接超时时间（毫秒）
+#  application:
+#    name: eurekaclient
+#
+## 扫描 mybatis 文件
+#mybatis:
+#  mapperLocations: classpath:com/maple/*/mapper/*.xml
+#  typeAliasesPackage: com.hs.*.model
+#
+##ID 生成策略配置
+#uuid:
+#  workerId: "2"
+#  datacenterId: "1"
+#
+##eureka
+#eureka:
+#  instance:
+#    hostname: ${spring.cloud.client.ipAddress}
+#    instanceId: ${spring.cloud.client.ipAddress}:${server.port}
+#  client:
+#    serviceUrl:
+#      defaultZone: http://localhost:8090/eureka/

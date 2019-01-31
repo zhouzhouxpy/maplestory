@@ -11,6 +11,6 @@ public class ApiController {
 
     @RequestMapping("getApiInfo")
     public String index(){
-        return "api data"+port;
+        return "中文 api data"+port;
     }
 }

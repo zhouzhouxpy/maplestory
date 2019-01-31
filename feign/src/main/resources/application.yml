@@ -3,7 +3,7 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:8090/eureka/
 server:
-  port: 8093
+  port: 8094
 spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
@@ -27,9 +27,8 @@ spring:
       max-wait: -1 # 连接超时时间（毫秒）
       max-idle: 8
   application:
-    name: getway
-zuul:
-  routes:
-    api:
-      path: /api/**
-      serviceId: eurekaclient
+    name: feign
+#feign 断路器
+feign:
+  hystrix:
+    enabled: true

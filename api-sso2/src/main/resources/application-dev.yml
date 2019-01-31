@@ -19,7 +19,7 @@ spring:
   redis:
     host: 47.96.174.226
     port: 6379
-    password:
+    password: dfas6485751
     database: 0
     pool:
       max-active: 8

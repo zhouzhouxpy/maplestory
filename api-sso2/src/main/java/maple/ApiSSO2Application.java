@@ -6,8 +6,8 @@ import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
 
 @SpringBootApplication
 @EnableEurekaClient
-public class ApiSSOApplication {
+public class ApiSSO2Application {
     public static void main(String[] args) {
-        SpringApplication.run(ApiSSOApplication.class, args);
+        SpringApplication.run(ApiSSO2Application.class, args);
     }
 }

@@ -3,4 +3,6 @@ include 'eureka-server'
 include 'api-sso'
 include 'api-sso2'
 include 'getway'
+include 'feign'
+include 'config'
 

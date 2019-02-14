@@ -11,9 +11,18 @@ spring:
       discovery:
         enabled: true
         serviceId: config #连接的配置中心名字（applicaiton.name）
+    bus:
+      trace:
+        enabled: true
+  rabbitmq:
+    host: 47.96.174.226
+    port: 15672
+    username: guest
+    password: guest
 eureka:
   client:
     serviceUrl:
      defaultZone: http://localhost:8090/eureka/
-#server:
-#  port: 8091
+management:
+  security:
+    enabled: false

@@ -21,10 +21,14 @@ public class MapleStoryApplication {
     }
     private CorsConfiguration buildConfig() {
         CorsConfiguration corsConfiguration = new CorsConfiguration();
-        corsConfiguration.addAllowedOrigin("*"); // 1 设置访问源地址
-//        corsConfiguration.addAllowedOrigin("http://test.huashunhro.cn/");//设置多个访问源
-        corsConfiguration.addAllowedHeader("*"); // 2 设置访问源请求头
-        corsConfiguration.addAllowedMethod("*"); // 3 设置访问源请求方法
+        // 1 设置访问源地址
+        corsConfiguration.addAllowedOrigin("*");
+        //设置多个访问源
+//        corsConfiguration.addAllowedOrigin("http://test.huashunhro.cn/");
+        // 2 设置访问源请求头
+        corsConfiguration.addAllowedHeader("*");
+        // 3 设置访问源请求方法
+        corsConfiguration.addAllowedMethod("*");
         return corsConfiguration;
     }
 

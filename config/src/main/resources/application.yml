@@ -31,14 +31,12 @@ spring:
       max-idle: 8
   application:
     name: config
-  profiles:
-    active: dev
   cloud:
     config:
       server:
         git:
           uri: https://github.com/zhouzhouxpy/maplestory.git
-          search-paths: cloudconfig/**
+          search-paths: cloudconfig
           username: zhouzhouxpy
           password: dfas528811729
         default-label: master

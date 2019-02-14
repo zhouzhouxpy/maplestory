@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
  * @date: 2019/1/30 17:33
  */
 @Component
-public class ApiServiceError implements ApiService {
+public class ApiServiceImpl implements ApiService {
     @Override
     public String index() {
         return "服务发生故障！";

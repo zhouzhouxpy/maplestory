@@ -1,4 +1,4 @@
-package com.maple.web.api.User.controller;
+package com.maple.web.api.user.controller;
 
 import com.maple.common.model.UUID;
 import org.springframework.beans.factory.annotation.Autowired;

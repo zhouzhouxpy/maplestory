@@ -1,4 +1,4 @@
-package com.maple.common.Aspect;
+package com.maple.common.aspect;
 
 import org.aspectj.lang.annotation.AfterThrowing;
 import org.aspectj.lang.annotation.Aspect;
@@ -19,7 +19,7 @@ import java.io.PrintWriter;
  * @author: lixuesong
  * @date: 2019/1/26 20:40
  */
-//@Aspect
+//@aspect
 //@Component
 public class WebAspect {
     private static final Logger logger = LoggerFactory.getLogger(WebAspect.class);

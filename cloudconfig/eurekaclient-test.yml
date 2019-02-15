@@ -2,8 +2,6 @@ eureka:
   client:
     serviceUrl:
       defaultZone: http://localhost:8090/eureka/
-server:
-  port: 8093
 spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
@@ -16,3 +14,4 @@ spring:
       force: true
       charset: UTF-8
       enabled: true
+workId: 2

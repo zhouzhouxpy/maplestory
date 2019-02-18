@@ -1,12 +1,5 @@
-eureka:
-  instance:
-    hostname: ${spring.cloud.client.ipAddress}
-    instanceId: ${spring.cloud.client.ipAddress}:${server.port}
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:8090/eureka/
 server:
-  port: 8095
+  port: 9411
 spring:
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
@@ -30,22 +23,10 @@ spring:
       max-wait: -1 # 连接超时时间（毫秒）
       max-idle: 8
   application:
-    name: config
-  cloud:
-    config:
-      server:
-        git:
-          uri: https://github.com/zhouzhouxpy/maplestory.git
-          search-paths: cloudconfig
-          username: zhouzhouxpy
-          password: dfas528811729
-        default-label: master
-      label: master
-    bus:
-      trace:
-        enabled: true
+    name: zipkin
   rabbitmq:
     host: 47.96.174.226
     port: 5672
     username: guest
     password: guest
+#feign 断路器

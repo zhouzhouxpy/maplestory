@@ -5,4 +5,6 @@ include 'api-sso2'
 include 'getway'
 include 'feign'
 include 'config'
+include 'zipkin'
+findProject(':zipkin')?.name = 'com.maple'
 

@@ -1,9 +1,11 @@
 package com.maple.controller;
 
+import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import springfox.documentation.annotations.ApiIgnore;
 
 /**
  * @Author lixuesong
@@ -12,6 +14,7 @@ import org.springframework.web.bind.annotation.RestController;
  **/
 @RefreshScope
 @RestController
+@RequestMapping("/api")
 public class ApiController {
     @Value("${server.port}")
     private int port;
@@ -32,12 +35,14 @@ public class ApiController {
      * @apiError userNotFound  The <code>id</code>
      * @apiSampleRequest /index
      */
-    @RequestMapping("getApiInfo")
+    @ApiIgnore
+    @ApiOperation(value="获取api信息", notes="获取信息")
+    @RequestMapping("/getApiInfo")
     public String index(){
         return "中文 api data"+port;
     }
 
-    @RequestMapping("getWorkId")
+    @RequestMapping("/getWorkId")
     public String getWorkId(){
         return "workId is "+workId;
     }

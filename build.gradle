@@ -28,6 +28,7 @@ subprojects {
     }
     dependencies {
         compile group: 'io.springfox', name: 'springfox-swagger2', version: '2.9.2'
+        compile group: 'io.springfox', name: 'springfox-swagger-ui', version: '2.9.2'
         compile group: 'com.google.guava', name: 'guava', version: '25.1-jre'
         compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-redis', version: '1.5.4.RELEASE'
         compile("org.springframework.boot:spring-boot-starter-web")

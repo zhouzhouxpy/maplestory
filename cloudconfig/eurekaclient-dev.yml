@@ -8,7 +8,7 @@ spring:
     driverClassName: com.mysql.jdbc.Driver
     url: jdbc:mysql://localhost:3306/maple?characterEncoding=utf-8
     username: root
-    password: Dfas528811729!
+    password: 123456
   http:
     encoding:
       force: true
